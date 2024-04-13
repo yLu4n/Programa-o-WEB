@@ -6,7 +6,7 @@ body {
     align-items: center;
     min-height: 100vh;
     user-select: none;
-    background: #ecf0f3;
+    background: #aeafaf;
 }
 
 .container {
@@ -43,6 +43,22 @@ body {
     box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),
         inset -5px -5px 8px #fff;
     background: #fff;
+}
+
+#on-off {
+    font-size: 14px; /* Tamanho da fonte */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #ff3333; /* Cor de fundo vermelha */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remover borda */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+#on-off:hover {
+    box-shadow: inset 5px 5px 8px #cc0000,
+        inset -5px -5px 8px #a51717;
+    background: #af0000; /* Cor de fundo mais escura ao passar o mouse */
 }
 
 .display #screen {
@@ -85,6 +101,7 @@ body {
 #ce {
     background: #ff3399;
     color: #fff;
+    width: 135px;
 }
 
 #ce:hover {
