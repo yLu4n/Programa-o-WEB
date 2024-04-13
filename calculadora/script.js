@@ -1,7 +1,8 @@
+
 var screen = document.querySelector('#screen');
+var memory = null;
         var btn = document.querySelectorAll('.btn');
 
-        /*============ For getting the value of btn, Here we use for loop ============*/
         for (item of btn) {
             item.addEventListener('click', (e) => {
                 btntext = e.target.innerText;
@@ -29,11 +30,11 @@ var screen = document.querySelector('#screen');
             screen.value = Math.tan(screen.value);
         }
 
-        function pow() {
+        function elevado() {
             screen.value = Math.pow(screen.value, 2);
         }
 
-        function sqrt() {
+        function raiz() {
             screen.value = Math.sqrt(screen.value, 2);
         }
 
@@ -51,4 +52,26 @@ var screen = document.querySelector('#screen');
 
         function apagar() {
             screen.value = screen.value.substr(0, screen.value.length - 1);
+        }
+
+        function storeMemory() {
+            memory += parseFloat(screen.value); // Armazena o valor da tela convertido para um número
+        }
+        
+        // Função para recuperar o valor da memória e exibi-lo na tela
+        function recallMemory() {
+            if (memory !== null) {
+                screen.value = memory; // Define o valor da tela como o valor armazenado na memória
+            }
+        }
+        
+        // Função para limpar a memória
+        function clearMemory() {
+            memory = null; // Limpa o valor da memória
+        }
+
+        function subtractMemory() {
+            if (memory !== null) {
+                memory -= parseFloat(screen.value); // Subtrai o valor atual da tela do valor na memória
+            }
         }
